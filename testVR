@@ -1,0 +1,8 @@
+---
+- name: testAmr VM
+  hosts: Project1-caadmin-015
+  tasks:
+    - name: install httpd
+      yum:
+        name: httpd
+        state: latest:
