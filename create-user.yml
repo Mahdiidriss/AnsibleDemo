@@ -1,6 +1,6 @@
 ---
 - name: Add a user
-  hosts: all
+  hosts: azuremachine
   gather_facts: true
   tasks:
     - name: Add User
