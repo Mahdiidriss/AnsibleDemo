@@ -1,10 +1,10 @@
 ---
 - name: Add a user
-  hosts: azuremachine
+  hosts: all
   gather_facts: true
   tasks:
     - name: Add User
       win_user:
-        name: webinar
+        name: liveweb
         password: "123456"
         state: present
