@@ -1,0 +1,13 @@
+{
+  "hostnames": [
+    "computer_name"
+  ],
+  "compose": {
+    "ansible_host": "public_ipv4_addresses[0]"
+  },
+  "keyed_groups": [
+    {
+      "key": "os_profile.system"
+    }
+  ]
+}
