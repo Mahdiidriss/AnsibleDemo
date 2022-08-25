@@ -1,0 +1,24 @@
+ansible-inventory [core 2.12.1]
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = ['/home/runner/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.8/site-packages/ansible
+  ansible collection location = /home/runner/.ansible/collections:/usr/share/ansible/collections:/usr/share/automation-controller/collections
+  executable location = /usr/bin/ansible-inventory
+  python version = 3.8.8 (default, Aug 11 2021, 06:52:42) [GCC 8.5.0 20210514 (Red Hat 8.5.0-3)]
+  jinja version = 2.10.3
+  libyaml = True
+Using /etc/ansible/ansible.cfg as config file
+redirecting (type: inventory) ansible.builtin.azure_rm to azure.azcollection.azure_rm
+[WARNING]:  * Failed to parse /runner/inventory/azure_rm.yml with auto plugin:
+a batched request failed with status code 403, url /subscriptions/cf487487-fa5e
+-49cc-90a3-a68c851d1e72/providers/Microsoft.Compute/virtualMachines
+  File "/usr/lib/python3.8/site-packages/ansible/inventory/manager.py", line 290, in parse_source
+    plugin.parse(self._inventory, self._loader, source, cache=cache)
+  File "/usr/lib/python3.8/site-packages/ansible/plugins/inventory/auto.py", line 58, in parse
+    plugin.parse(inventory, loader, path, cache=cache)
+  File "/usr/share/ansible/collections/ansible_collections/azure/azcollection/plugins/inventory/azure_rm.py", line 220, in parse
+    self._get_hosts()
+  File "/usr/share/ansible/collections/ansible_collections/azure/azcollection/plugins/inventory/azure_rm.py", line 277, in _get_hosts
+    self._process_queue_batch()
+  File "/usr/share/ansible/collections/ansible_collections/azure/azcollection/plugins/inventory/azure_rm.py", line 419, in _process_queue_batch
+    raise AnsibleError("a batched request failed with status code {0}, url {1}".format(status_code, result.url))
