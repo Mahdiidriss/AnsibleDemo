@@ -4,5 +4,5 @@
   tasks:
     - name: Add User
       user: 
-        name: testo
+        name: mushtaquser
         state: present
